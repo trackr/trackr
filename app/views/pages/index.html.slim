@@ -1,0 +1,19 @@
+header
+  hgroup
+    h1 Trackr
+    h2 Manage and track your tasks
+
+  section#sign-in
+    span Login
+    form id='login' action='users/sign_in' method='post'
+      input type='email' name='user[email]' placeholder='email'
+      input type='password' name='user[password]' placeholder='password'
+      input type='checkbox' name='user[remember_me]' value='Remember me'
+      label Remember me
+      input type='submit' value='Login' name='' class='btn btn-blue'
+
+    div
+      a href='users/sign_up' Sign up
+    div
+      a href='users/password/new' Forgot your password?
+

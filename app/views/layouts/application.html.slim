@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Trackr
+    meta name='keywords' content='Track your daily tasks'
+    meta name='author' content='Norman Ancajas'
+    = stylesheet_link_tag 'application', :media => 'all'
+    = csrf_meta_tags
+
+  body
+    .firstBorder
+    .secondBorder
+    .thirdBorder
+
+    #main-container
+      == yield

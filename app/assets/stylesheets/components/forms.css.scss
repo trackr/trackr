@@ -1,0 +1,17 @@
+#login {
+  input {
+    display: block;
+    margin-top: 10px;
+
+  }
+
+  input[type='submit'] {
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  input[type='checkbox'] {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
