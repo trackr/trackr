@@ -3,6 +3,8 @@ Trackr::Application.routes.draw do
 
   authenticated :user do
     root :to => "main#dashboard"
+
+    match '/mytasks/:year/:month/:day' => 'main#daily_report', :as => 'daily_report'
   end
 
   root to: 'pages#index'

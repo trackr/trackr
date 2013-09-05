@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  duration_in_minutes: 1
+  date: 2013-09-05
+  task_id: 1
+
+two:
+  duration_in_minutes: 1
+  date: 2013-09-05
+  task_id: 1
