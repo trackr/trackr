@@ -7,5 +7,13 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  # attr_accessible :title, :body
+
+  has_many :tasks
+
+  def has_existing_category(category)
+    scoped_categories = []
+    tasks.map { |task| scoped_categories << task.try(:category).try(:name) }
+    scoped_categories.uniq!
+    scoped_categories.include? category
+  end
 end
