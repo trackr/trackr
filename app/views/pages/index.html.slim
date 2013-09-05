@@ -6,10 +6,12 @@ header
   section#sign-in
     span Login
     form id='login' action='users/sign_in' method='post'
+      /input name='utf8' type='hidden' value="&#x2713;"
+      = token_tag 'authenticity_token'
       input type='email' name='user[email]' placeholder='email'
       input type='password' name='user[password]' placeholder='password'
-      input type='checkbox' name='user[remember_me]' value='Remember me'
-      label Remember me
+      input id='user_remember_me' type='checkbox' name='user[remember_me]'
+      label for='user_remember_me' Remember me
       input type='submit' value='Login' name='' class='btn btn-blue'
 
     div
