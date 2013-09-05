@@ -1,7 +1,7 @@
 class Tasks < ActiveRecord::Base
   attr_accessible :category_id, :name
 
-  belongs_to :category
+  belongs_to :category, :counter_cache => true
   delegate :user, :to => :category
 
   validates_presence_of :name
