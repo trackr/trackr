@@ -14,5 +14,9 @@ class MainController < ApplicationController
     end
 
     @task_entries = TaskEntry.for_user(current_user)
+                             .with_date(@date)
+                             .decreasing_duration
+                             .includes(:task)
+                             .includes(:category)
   end
 end
