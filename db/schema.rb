@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905144145) do
+ActiveRecord::Schema.define(:version => 20130905151949) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -33,9 +33,10 @@ ActiveRecord::Schema.define(:version => 20130905144145) do
   create_table "tasks", :force => true do |t|
     t.string   "name"
     t.integer  "category_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.integer  "user_id"
+    t.string   "color",       :default => "#333333", :null => false
   end
 
   add_index "tasks", ["category_id"], :name => "index_tasks_on_category_id"

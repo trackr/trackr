@@ -13,6 +13,6 @@ class MainController < ApplicationController
       redirect_to root_path
     end
 
-    @task_entries = TaskEntry
+    @task_entries = TaskEntry.for_user(current_user)
   end
 end
