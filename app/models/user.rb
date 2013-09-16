@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   has_many :tasks
+  has_many :categories
 
   def has_existing_category(category)
     scoped_categories = []

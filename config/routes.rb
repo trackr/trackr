@@ -5,6 +5,15 @@ Trackr::Application.routes.draw do
     root :to => "main#dashboard"
 
     match '/mytasks/:year/:month/:day' => 'main#daily_report', :as => 'daily_report'
+
+    scope :path => '/dashboard', :controller => 'main' do
+      match 'daily' => :daily, :as => 'daily'
+      match 'weekly' => :weekly, :as => 'weekly'
+    end
+
+    namespace 'v1' do
+      
+    end
   end
 
   root to: 'pages#index'
