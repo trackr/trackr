@@ -5,6 +5,7 @@ html
     meta name='keywords' content='Track your daily tasks'
     meta name='author' content='Norman Ancajas'
     = stylesheet_link_tag 'application', :media => 'all'
+    = requirejs_include_tag 'application'
     = csrf_meta_tags
 
   body
@@ -19,4 +20,4 @@ html
         p hello there
       == yield
 
-    = javascript_include_tag 'application', :media => 'all'
+    /= javascript_include_tag 'application', :media => 'all'
