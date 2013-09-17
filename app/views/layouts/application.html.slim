@@ -4,6 +4,7 @@ html
     title Trackr
     meta name='keywords' content='Track your daily tasks'
     meta name='author' content='Norman Ancajas'
+    = include_gon
     = stylesheet_link_tag 'application', :media => 'all'
     = requirejs_include_tag 'application'
     = csrf_meta_tags

@@ -31,3 +31,4 @@ gem 'thin', :group => 'development'
 gem 'jbuilder'
 
 gem 'requirejs-rails'
+gem 'gon'
