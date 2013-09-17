@@ -4,7 +4,9 @@ html
     title Trackr
     meta name='keywords' content='Track your daily tasks'
     meta name='author' content='Norman Ancajas'
+    = include_gon
     = stylesheet_link_tag 'application', :media => 'all'
+    = requirejs_include_tag 'application'
     = csrf_meta_tags
 
   body
@@ -17,6 +19,8 @@ html
         = link_to 'Logout', destroy_user_session_path, method: :delete
       - else
         p hello there
+      #header
+      #content
       == yield
 
-    = javascript_include_tag 'application', :media => 'all'
+    /= javascript_include_tag 'application', :media => 'all'

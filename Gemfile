@@ -28,3 +28,7 @@ gem 'pry-rails', :group => 'development'
 # quiet server logs
 gem 'quiet_assets'
 gem 'thin', :group => 'development'
+gem 'jbuilder'
+
+gem 'requirejs-rails'
+gem 'gon'
