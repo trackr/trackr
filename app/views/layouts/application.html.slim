@@ -19,6 +19,8 @@ html
         = link_to 'Logout', destroy_user_session_path, method: :delete
       - else
         p hello there
+      #header
+      #content
       == yield
 
     /= javascript_include_tag 'application', :media => 'all'

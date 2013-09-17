@@ -1,19 +1,15 @@
-define(['jquery','underscore','backbone', 'app/routers/daily_report'], function(
-         $, _, Backbone, App_Routers_DailyReport) {
-  window.App = {
-  //  Routers: {},
-  //  Views: {},
-  //  Collections: {},
-  //  Models: {},
-    Vent: _.clone(Backbone.Events),
-  //  Mixins: {}
-  }
+//define(['jquery','underscore','backbone', 'app/routers/daily_report'], function(
+//         $, _, Backbone, Routers_DailyReport) {
+define(function(require) {
+  var $ = require('jquery');
+  var _ = require('underscore');
+  var Backbone = require('backbone');
+  var Routers_DailyReport = require('app/routers/daily_report');
 
   return {
     initialize: function() {
       if ($('.js-daily-report-page').length > 0) {
-        $('#main-container').append('<div>daily report page</div>');
-        new App_Routers_DailyReport();
+        new Routers_DailyReport();
       } else {
         $('#main-container').append('<div>not daily report page</div>');
       }
