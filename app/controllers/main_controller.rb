@@ -14,5 +14,6 @@ class MainController < ApplicationController
                              .with_category
                              .decreasing_duration
                              .selected_cols
+    gon.task_entries = @task_entries.to_json
   end
 end

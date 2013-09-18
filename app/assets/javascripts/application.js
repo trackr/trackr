@@ -16,4 +16,3 @@
 //= require handlebars.runtime
 //= require backbone
 //= require trackr
-//= require_tree .
