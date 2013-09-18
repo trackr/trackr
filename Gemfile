@@ -29,3 +29,6 @@ gem 'pry-rails', :group => 'development'
 gem 'quiet_assets'
 gem 'thin', :group => 'development'
 gem 'jbuilder'
+
+gem 'gon'
+gem 'backbone-on-rails'
