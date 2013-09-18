@@ -32,3 +32,4 @@ gem 'jbuilder'
 
 gem 'gon'
 gem 'backbone-on-rails'
+gem 'handlebars_assets'
