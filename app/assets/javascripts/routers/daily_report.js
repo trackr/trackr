@@ -4,6 +4,7 @@ App.Routers.DailyReport = Backbone.Router.extend({
   },
   index: function() {
     this.layoutViews();
+    this.contentView.swapMain(new App.Views.TaskEntries({collection: App.Collections.TaskEntries}));
   },
   initialize: function() {
     this.headerView = new App.Views.Header();

@@ -23,7 +23,7 @@ class TaskEntry < ActiveRecord::Base
     end
 
     def selected_cols
-      select("task_entries.duration_in_minutes,task_entries.date, tasks.name as task_name,
+      select("task_entries.id, task_entries.duration_in_minutes,task_entries.date, tasks.name as task_name,
               categories.name as category_name")
     end
   end

@@ -1,7 +1,28 @@
 App.Views.Content = Backbone.View.extend({
-  //template: HandlebarsTemplates['views/content'],
+  className: "row",
+  template: HandlebarsTemplates['content'],
   render: function() {
-    this.$el.html('<div>content here</div>');
+    this.$el.html(this.template());
     return this;
+  },
+  swapMain: function(v) {
+    this.changeCurrentMainView(v);
+    this.$('#main-area').html(this.currentMainView.render().el);
+  },
+  changeCurrentMainView: function(v) {
+    if (this.currentMainView != null) {
+      this.currentMainView.leave();
+    }
+    this.currentMainView = v;
+  },
+  changeFigure: function(v) {
+    this.changeCurrentFigureView(v);
+    this.$('#figure-area').html(this.currentFigureView.render().el);
+  },
+  changeCurrentFigureView: function(v) {
+    if (this.currentFigureView != null) {
+      this.currentFigureView.leave();
+    }
+    this.currentFigureView = v;
   }
 });

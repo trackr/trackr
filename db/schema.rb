@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130916163622) do
+ActiveRecord::Schema.define(:version => 20130919082408) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20130916163622) do
 
   add_index "categories", ["user_id"], :name => "index_categories_on_user_id"
 
-  create_table "task_entries", :id => false, :force => true do |t|
+  create_table "task_entries", :force => true do |t|
     t.integer  "duration_in_minutes"
     t.date     "date"
     t.integer  "task_id"

@@ -1,4 +1,5 @@
 json.array! @task_entries do |te|
+  json.id te.id
   json.name te.task_name
   json.category_name te.category_name
   json.duration_in_min te.duration_in_minutes
