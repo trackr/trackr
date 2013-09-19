@@ -26,5 +26,11 @@ class TaskEntry < ActiveRecord::Base
       select("task_entries.id, task_entries.duration_in_minutes,task_entries.date, tasks.name as task_name,
               categories.name as category_name")
     end
+
+    def generate_query(options = {})
+      return nil if options[:user].nil? || options[:date].nil?
+
+      with_task_for_user(options[:user]).with_date(options[:date]).with_category.selected_cols.decreasing_duration
+    end
   end
 end

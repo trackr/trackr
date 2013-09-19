@@ -8,12 +8,7 @@ class MainController < ApplicationController
   end
 
   def daily
-    @date = Date.today
-    @task_entries = TaskEntry.with_task_for_user(current_user)
-                             .with_date(@date)
-                             .with_category
-                             .decreasing_duration
-                             .selected_cols
+    @task_entries = TaskEntry.generate_query({user: current_user, date: Date.today })
     gon.task_entries = @task_entries.to_json
   end
 end
