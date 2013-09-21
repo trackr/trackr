@@ -1,4 +1,5 @@
 //= require_self
+//= require_tree ./datawrapper
 //= require_tree ./mixins
 //= require_tree ./templates
 //= require_tree ./models
@@ -10,6 +11,7 @@ window.App = {
   Collections: {},
   Views: {},
   Routers: {},
+  DataWrapper: {},
   Vent: _.clone(Backbone.Events),
   initialize: function() {
     if ($('.js-daily-report-page').length > 0) {

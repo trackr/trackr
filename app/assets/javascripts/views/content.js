@@ -15,7 +15,7 @@ App.Views.Content = Backbone.View.extend({
     }
     this.currentMainView = v;
   },
-  changeFigure: function(v) {
+  swapFigure: function(v) {
     this.changeCurrentFigureView(v);
     this.$('#figure-area').html(this.currentFigureView.render().el);
   },

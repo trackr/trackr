@@ -16,4 +16,5 @@
 //= require handlebars.runtime
 //= require backbone
 //= require ./lib/backbone_leave
+//= require Chart
 //= require trackr

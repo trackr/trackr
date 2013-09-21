@@ -5,8 +5,7 @@ App.Routers.DailyReport = Backbone.Router.extend({
   index: function() {
     this.layoutViews();
     this.contentView.swapMain(new App.Views.TaskEntries({collection: new App.Collections.TaskEntries(JSON.parse(gon.task_entries)) }));
-    //this.contentView.swapMain(new App.Views.TaskEntries({collection: new App.Collections.TaskEntries() }));
-    //this.contentView.swapMain(new App.Views.TaskEntries() );
+    this.contentView.swapFigure(new App.Views.ChartJSDaily({render_data: new App.DataWrapper.TaskEntries(JSON.parse(gon.task_entries)) }));
   },
   initialize: function() {
     this.headerView = new App.Views.Header();
