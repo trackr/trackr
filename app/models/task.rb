@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :category_id, :name, :user
+  attr_accessible :category_id, :name, :user, :color
 
   belongs_to :category, :counter_cache => true
   belongs_to :user

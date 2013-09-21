@@ -24,7 +24,7 @@ class TaskEntry < ActiveRecord::Base
 
     def selected_cols
       select("task_entries.id, task_entries.duration_in_minutes as duration_in_min,task_entries.date, tasks.name as name,
-              categories.name as category_name")
+              categories.name as category_name, tasks.color as color")
     end
 
     def generate_query(options = {})
