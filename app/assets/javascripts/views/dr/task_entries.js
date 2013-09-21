@@ -6,8 +6,7 @@ App.Views.TaskEntries = Backbone.View.extend({
     this.listenTo(this.collection, 'add', this.renderTaskEntry);
   },
   render: function() {
-    this.$el.html(this.template({date: this.collection.first().get('date')}));
-    //this.$el.html(this.template());
+    this.$el.html(this.template({date: gon.date}));
     this.collection.forEach(this.renderTaskEntry, this);
     return this;
   },

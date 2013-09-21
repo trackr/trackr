@@ -10,5 +10,6 @@ class MainController < ApplicationController
   def daily
     @task_entries = TaskEntry.generate_query({user: current_user, date: Date.today })
     gon.task_entries = @task_entries.to_json
+    gon.date = Date.today
   end
 end

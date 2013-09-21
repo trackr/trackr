@@ -9,7 +9,6 @@ gem 'sqlite3'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -23,13 +22,13 @@ gem 'slim-rails'
 
 gem 'devise'
 
-gem 'pry-rails', :group => 'development'
+group :development do
+  gem 'pry-rails'
+  gem 'quiet_assets'
+  gem 'thin', :group => 'development'
+end
 
-# quiet server logs
-gem 'quiet_assets'
-gem 'thin', :group => 'development'
 gem 'jbuilder'
-
 gem 'gon'
 gem 'backbone-on-rails'
 gem 'handlebars_assets'
