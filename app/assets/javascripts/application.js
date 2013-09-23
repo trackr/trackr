@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require underscore
+//= require handlebars.runtime
+//= require backbone
+//= require ./lib/backbone_leave
+//= require Chart
+//= require trackr

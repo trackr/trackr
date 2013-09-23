@@ -1,22 +1,15 @@
 class MainController < ApplicationController
+  respond_to :json
+
   before_filter :authenticate_user!
 
   def dashboard
-    month, day, year = Time.now.strftime('%D').split '/'
-    redirect_to daily_report(:year => year, :month => month, :day => day)
+    redirect_to daily_path
   end
 
-  def daily_report
-    begin
-      @date = Date.parse "#{params[:month].to_i}/#{params[:day].to_i}/#{params[:year].to_i}"
-    rescue
-      redirect_to root_path
-    end
-
-    @task_entries = TaskEntry.for_user(current_user)
-                             .with_date(@date)
-                             .decreasing_duration
-                             .includes(:task)
-                             .includes(:category)
+  def daily
+    @task_entries = TaskEntry.generate_query({user: current_user, date: Date.today })
+    gon.task_entries = @task_entries.to_json
+    gon.date = Date.today
   end
 end
