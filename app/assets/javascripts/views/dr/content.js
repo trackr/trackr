@@ -1,6 +1,6 @@
-App.Views.Content = Backbone.View.extend({
+App.Views.DR.Content = Backbone.View.extend({
   className: "row",
-  template: HandlebarsTemplates['content'],
+  template: HandlebarsTemplates['dr/content'],
   render: function() {
     this.$el.html(this.template());
     return this;

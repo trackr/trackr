@@ -1,4 +1,4 @@
-App.Views.ChartJSDaily = Backbone.View.extend({
+App.Views.DR.ChartJSDaily = Backbone.View.extend({
   template: HandlebarsTemplates['dr/chartjs_daily'],
   render: function() {
     this.$el.html(this.template());

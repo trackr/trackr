@@ -7,15 +7,25 @@
 //= require_tree ./routers
 
 window.App = {
-  Models: {},
-  Collections: {},
-  Views: {},
-  Routers: {},
-  DataWrapper: {},
+  Models: {
+    DR: {}
+  },
+  Collections: {
+    DR: {}
+  },
+  Views: {
+    DR: {}
+  },
+  Routers: {
+    DR: {}
+  },
+  DataWrapper: {
+    DR: {}
+  },
   Vent: _.clone(Backbone.Events),
   initialize: function() {
     if ($('.js-daily-report-page').length > 0) {
-      new App.Routers.DailyReport();
+      new App.Routers.DR.DailyReport();
       Backbone.history.start();
     } else {
       console.log('not daily report page');

@@ -1,6 +1,6 @@
-App.Views.Header = Backbone.View.extend({
+App.Views.DR.Header = Backbone.View.extend({
   className: "row",
-  template: HandlebarsTemplates['header'],
+  template: HandlebarsTemplates['dr/header'],
   render: function() {
     this.$el.html(this.template());
     return this;

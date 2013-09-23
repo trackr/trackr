@@ -1,4 +1,4 @@
-App.Views.TaskEntry = Backbone.View.extend({
+App.Views.DR.TaskEntry = Backbone.View.extend({
   template: HandlebarsTemplates['dr/task_entry'],
   initialize: function() {
   },
